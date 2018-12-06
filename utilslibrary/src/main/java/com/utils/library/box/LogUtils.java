@@ -2,10 +2,10 @@ package com.utils.library.box;
 
 import android.util.Log;
 
-import com.utils.library.KitSettings;
+import com.utils.library.UtilSettings;
 
 public class LogUtils {
-    public static final boolean IS_DEBUG = KitSettings.debugMode;
+    public static final boolean IS_DEBUG = UtilSettings.debugMode;
 
     public static String getObjectName(Object object) {
         String temp = object.getClass().getName();

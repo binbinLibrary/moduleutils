@@ -15,7 +15,7 @@ import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
 
-import com.utils.library.KitSettings;
+import com.utils.library.UtilSettings;
 
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
@@ -139,7 +139,7 @@ public class CameraUtils {
      * @return
      */
     public static String getFileName() {
-        String saveDir = Environment.getExternalStorageDirectory() + KitSettings.filePath + "/images";
+        String saveDir = Environment.getExternalStorageDirectory() + UtilSettings.filePath + "/images";
         File file = new File(saveDir);
         if (!file.exists()) {
             file.mkdirs();// 创建文件夹
