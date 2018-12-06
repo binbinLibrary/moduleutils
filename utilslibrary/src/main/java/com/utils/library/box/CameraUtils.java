@@ -139,7 +139,7 @@ public class CameraUtils {
      * @return
      */
     public static String getFileName() {
-        String saveDir = Environment.getExternalStorageDirectory() + KitSettings.FILE_PATH + "/images";
+        String saveDir = Environment.getExternalStorageDirectory() + KitSettings.filePath + "/images";
         File file = new File(saveDir);
         if (!file.exists()) {
             file.mkdirs();// 创建文件夹

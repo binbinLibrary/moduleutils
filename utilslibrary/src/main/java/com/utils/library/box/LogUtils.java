@@ -5,7 +5,7 @@ import android.util.Log;
 import com.utils.library.KitSettings;
 
 public class LogUtils {
-    public static final boolean IS_DEBUG = KitSettings.IS_DEBUG_MODE;
+    public static final boolean IS_DEBUG = KitSettings.debugMode;
 
     public static String getObjectName(Object object) {
         String temp = object.getClass().getName();
