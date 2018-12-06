@@ -159,8 +159,7 @@ public class CameraUtils {
      * @return
      */
     public static Bitmap getPhoto(Activity context, Intent data) {
-        context.getWindowManager().getDefaultDisplay()
-                .getMetrics(displayMetrics);
+        context.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         Bitmap bitmap = null;
         if (data != null) {
             // 照片的原始资源地址
