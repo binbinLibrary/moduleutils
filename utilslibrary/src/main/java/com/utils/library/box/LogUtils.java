@@ -2,7 +2,7 @@ package com.utils.library.box;
 
 import android.util.Log;
 
-import com.depend.kit.KitSettings;
+import com.utils.library.KitSettings;
 
 public class LogUtils {
     public static final boolean IS_DEBUG = KitSettings.IS_DEBUG_MODE;
