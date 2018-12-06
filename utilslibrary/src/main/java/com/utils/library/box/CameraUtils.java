@@ -15,7 +15,7 @@ import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
 
-import com.depend.kit.KitSettings;
+import com.utils.library.KitSettings;
 
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
