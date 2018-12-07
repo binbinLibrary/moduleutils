@@ -92,8 +92,7 @@ public class EncodeUtils {
             return null;
         }
         char[] data = string.toCharArray();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream(
-                string.toCharArray().length);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream(string.toCharArray().length);
         int pos = 0;
         int val = 0;
         for (int i = 0; i < data.length; i++) {

@@ -200,9 +200,7 @@ public final class BitmapUtils {
             return 1;
         }
         int ratio = Math.max(bWidth / vWidth, bHeight / vHeight);
-
         int ratioAfterRotate = Math.max(bHeight / vWidth, bWidth / vHeight);
-
         return Math.min(ratio, ratioAfterRotate);
     }
 

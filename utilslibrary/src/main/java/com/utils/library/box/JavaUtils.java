@@ -27,21 +27,27 @@ import java.util.Set;
 public class JavaUtils {
     public static final int ASCII_DATA_A = 65;
 
+    /**
+     * Map对象转json格式字符串
+     * @param map
+     * @return
+     */
     public static JSONObject mapToJson(Map<String, String> map) {
         JSONObject json = new JSONObject();
         try {
             for (Map.Entry<String, String> entry : map.entrySet()) {
-                json.put(entry.getKey(), entry.getValue().toString());
+                json.put(entry.getKey(), entry.getValue().toString().trim());
             }
         } catch (JSONException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return json;
     }
 
     /**
-     * 将json格式的字符串解析成Map对象
+     * json格式字符串转Map对象
+     * @param json
+     * @return
      */
     public static HashMap<String, String> jsonToMap(String json) {
         HashMap<String, String> map = new HashMap<>();
@@ -61,8 +67,13 @@ public class JavaUtils {
         return map;
     }
 
-    //加密手机号
-    public static String phoneEncryption(String phone) {
+    /**
+     * 加密手机号
+     *
+     * @param phone 手机号
+     * @return
+     */
+    public static String encryptionPhone(String phone) {
         if (!TextUtils.isEmpty(phone)) {
             return phone.replaceAll("(\\d{3})\\d{4}(\\d{4})", "$1****$2");
         } else {
@@ -70,8 +81,13 @@ public class JavaUtils {
         }
     }
 
-    //加密身份证号
-    public static String idCardEncryption(String idCard) {
+    /**
+     * 加密身份证号
+     *
+     * @param idCard 身份证号
+     * @return
+     */
+    public static String encryptionIdCard(String idCard) {
         if (!TextUtils.isEmpty(idCard)) {
             if (idCard.length() == 15) {
                 return idCard.replaceAll("(\\d{4})\\d{7}(\\w{4})", "$1*******$2");
@@ -86,16 +102,12 @@ public class JavaUtils {
     }
 
     /**
-     * <b>getOne。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 无。
+     * 获取list列表第一个对象
      *
      * @param list
      * @return
      */
-    public static Object getListFirstItem(List<Object> list) {
+    public static Object getListFirstObject(List<Object> list) {
         if ((list != null) && !list.isEmpty()) {
             if (list.get(0) != null) {
                 return list.get(0);
@@ -108,20 +120,16 @@ public class JavaUtils {
     }
 
     /**
-     * <b>getListItemById。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 返回list集合中指定id的对象。
+     * 返回list集合中指定id的对象。
      *
      * @param list
-     * @param id
+     * @param index
      * @return
      */
-    public static Object getListItemById(List<Object> list, int id) {
-        if ((list != null) && !list.isEmpty() && id < list.size()) {
-            if (list.get(id) != null) {
-                return list.get(id);
+    public static Object getListByIndex(List<Object> list, int index) {
+        if ((list != null) && !list.isEmpty() && index < list.size()) {
+            if (list.get(index) != null) {
+                return list.get(index);
             } else {
                 return null;
             }
@@ -131,11 +139,7 @@ public class JavaUtils {
     }
 
     /**
-     * <b>isListEmpty。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> list是否为空。
+     * list是否为空。
      *
      * @param l
      * @return
@@ -144,14 +148,32 @@ public class JavaUtils {
         return (l == null || l.isEmpty());
     }
 
+    /**
+     * 字符串是否为空
+     *
+     * @param context
+     * @return
+     */
     public static boolean isStringEmpty(String context) {
         return (context == null || context.trim().equals("") || context.trim().equals("null"));
     }
 
+    /**
+     * ascii转字符
+     *
+     * @param ascii
+     * @return
+     */
     public static char ASCII2String(int ascii) {
         return (char) ascii;
     }
 
+    /**
+     * 字符转ascii
+     *
+     * @param chars
+     * @return
+     */
     public static int string2ASCII(char chars) {
         return (int) chars;
     }
@@ -234,14 +256,14 @@ public class JavaUtils {
      * @param list2
      * @return
      */
-    public static List<String> getListDiff(List<String> list1, List<String> list2) {
-        List<String> diff = new ArrayList<String>();
-        for (String str : list1) {
-            if (!list2.contains(str)) {
-                diff.add(str);
+    public static List<Object> getListDiff(List<Object> list1, List<Object> list2) {
+        List<Object> diffList = new ArrayList<>();
+        for (Object object : list1) {
+            if (!list2.contains(object)) {
+                diffList.add(object);
             }
         }
-        return diff;
+        return diffList;
     }
 
     /**
@@ -251,19 +273,28 @@ public class JavaUtils {
      * @param list2
      * @return
      */
-    public static List<String> getListSame(List<String> list1, List<String> list2) {
-        List<String> same = new ArrayList<String>();
-        for (String str : list1) {
-            if (list2.contains(str)) {
-                same.add(str);
+    public static List<Object> getListSame(List<Object> list1, List<Object> list2) {
+        List<Object> sameList = new ArrayList<>();
+        for (Object object : list1) {
+            if (list2.contains(object)) {
+                sameList.add(object);
             }
         }
-        return same;
+        return sameList;
     }
 
     public static boolean isListContainsString(List<String> list, String str) {
         if (!isListEmpty(list)) {
             if (list.contains(str)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean isListContainsObject(List<Object> list, Object object) {
+        if (!isListEmpty(list)) {
+            if (list.contains(object)) {
                 return true;
             }
         }

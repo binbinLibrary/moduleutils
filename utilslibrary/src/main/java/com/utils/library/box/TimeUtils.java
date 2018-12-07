@@ -16,11 +16,11 @@ public class TimeUtils {
         long minutes = (totalSeconds / 60) % 60;
         long hours = totalSeconds / 3600;
         StringBuilder stringBuilder = new StringBuilder();
-        Formatter mFormatter = new Formatter(stringBuilder, Locale.getDefault());
+        Formatter formatter = new Formatter(stringBuilder, Locale.getDefault());
         if (hours > 0) {
-            return mFormatter.format("%d:%02d:%02d", hours, minutes, seconds).toString();
+            return formatter.format("%d:%02d:%02d", hours, minutes, seconds).toString();
         } else {
-            return mFormatter.format("%02d:%02d", minutes, seconds).toString();
+            return formatter.format("%02d:%02d", minutes, seconds).toString();
         }
     }
 }

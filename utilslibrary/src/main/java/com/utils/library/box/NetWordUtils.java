@@ -19,11 +19,7 @@ public class NetWordUtils {
     public static final String NET_TYPE_4G = "4g";
 
     /**
-     * <b>isNetAvailable。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 网络是否可用。
+     * 网络是否可用。
      *
      * @param context
      * @return
@@ -35,11 +31,7 @@ public class NetWordUtils {
     }
 
     /**
-     * <b>isConnect。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 是否联网。
+     * 是否联网。
      *
      * @param context
      * @return
@@ -49,12 +41,6 @@ public class NetWordUtils {
     }
 
     /**
-     * <b>getActiveNetworkInfo。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 无。
-     *
      * @param context
      * @return
      */
@@ -68,11 +54,7 @@ public class NetWordUtils {
     }
 
     /**
-     * <b>isMobileNetwork。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 是否连接的是移动通信网。
+     * 是否连接的是移动通信网。
      *
      * @param context
      * @return
@@ -89,11 +71,7 @@ public class NetWordUtils {
     }
 
     /**
-     * <b>isWifi。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 是否处于WIFI网络
+     * 是否处于WIFI网络
      *
      * @param context
      * @return
@@ -103,11 +81,7 @@ public class NetWordUtils {
     }
 
     /**
-     * <b>isUsingProxy。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 是否使用了代理。
+     * 是否使用了代理。
      *
      * @return
      */
@@ -120,11 +94,7 @@ public class NetWordUtils {
     }
 
     /**
-     * <b>getCurrentNetType。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 获取网络类型。
+     * 获取网络类型。
      *
      * @param context
      * @return
@@ -154,11 +124,7 @@ public class NetWordUtils {
     }
 
     /**
-     * <b>getWifiState。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 获取wifi状态。
+     * 获取wifi状态。
      *
      * @param context
      * @return
@@ -172,11 +138,7 @@ public class NetWordUtils {
     }
 
     /**
-     * <b>getWifiConnectivityState。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 获取wifi连接状态。
+     * 获取wifi连接状态。
      *
      * @param context
      * @return
@@ -187,11 +149,7 @@ public class NetWordUtils {
     }
 
     /**
-     * <b>wifiConnection。</b>
-     * <p>
-     * <b>详细说明：</b>
-     * </p>
-     * <!-- 在此添加详细说明 --> 用密码连接WIFI。
+     * 用密码连接WIFI。
      *
      * @param context
      * @param wifiSSID

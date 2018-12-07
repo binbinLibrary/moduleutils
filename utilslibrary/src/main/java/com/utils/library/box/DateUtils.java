@@ -8,6 +8,9 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
+/**
+ * 日期工具
+ */
 public class DateUtils {
     public static final String PATTERN1 = "yyyy-MM-dd HH:mm:ss";
     public static final String PATTERN2 = "yyyyMMddHHmmss";
@@ -56,7 +59,6 @@ public class DateUtils {
             SimpleDateFormat dd = new SimpleDateFormat(formatStr, Locale.getDefault());
             return dd.parse(dateStr);
         } catch (ParseException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return null;
